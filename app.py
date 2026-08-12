@@ -13,7 +13,7 @@ import streamlit as st
 # ─── شعار الموقع (يُضمَّن كـ base64 لأن مجلد assets لا يُخدَّم عبر الويب) ──────
 @st.cache_data(show_spinner=False)
 def _logo_uri(name: str) -> str:
-    path = os.path.join(os.path.dirname(__"assets"__), "assets", name)
+    path = os.path.join(os.path.dirname(__file__), "assets", name)
     mime = "image/jpeg" if name.lower().endswith((".jpg", ".jpeg")) else "image/png"
     try:
         with open(path, "rb") as f:
