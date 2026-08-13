@@ -1,6 +1,5 @@
 [server]
 headless = false
-port = 5000
 address = "127.0.0.1"
 enableCORS = false
 enableXsrfProtection = false
