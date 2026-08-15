@@ -1727,6 +1727,14 @@ html { scroll-behavior: auto; overflow-anchor: none; }
 .stApp { direction: rtl; background: #EEF2F7; }
 h1,h2,h3,h4,h5,h6,p,label,span,div { direction: rtl; text-align: right; }
 
+/* ═══ منع التمرير الأفقي وفراغ اليسار (RTL overflow fix) ═══ */
+html, body { overflow-x: hidden !important; }
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] { overflow-x: clip !important; }
+[data-testid="stMainBlockContainer"],
+.block-container { overflow-x: clip !important; max-width: 880px !important; }
+
 #MainMenu, header[data-testid="stHeader"], .stDeployButton { display: none !important; }
 
 .block-container {
@@ -2051,6 +2059,8 @@ div[data-testid="stForm"] button {
   box-shadow:0 1px 5px rgba(62,110,126,0.05);margin:2px 0 8px;}
 .st-key-ai_box:focus-within{border-color:#3e6e7e;box-shadow:0 2px 12px rgba(62,110,126,0.14);}
 .st-key-ai_box [data-testid="stVerticalBlock"]{gap:0.45rem !important;}
+.st-key-ai_box [data-testid="stFileUploader"],
+.st-key-ai_box [data-testid="stFileUploaderDropzone"] { min-width: 0 !important; max-width: 100% !important; }
 .st-key-ai_box [data-testid="stHorizontalBlock"]{flex-wrap:nowrap !important;gap:8px !important;
   align-items:center;justify-content:space-between !important;}
 .st-key-ai_box [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]{min-width:0 !important;
