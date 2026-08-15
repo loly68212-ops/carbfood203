@@ -1,12 +1,2 @@
-[server]
-headless = true
-enableCORS = false
-enableXsrfProtection = false
-
-[browser]
-gatherUsageStats = false
-
-[theme]
-base = "light"
-primaryColor = "#3e6e7e"
-font = "sans serif"
+﻿[client]
+toolbarMode = "viewer"
